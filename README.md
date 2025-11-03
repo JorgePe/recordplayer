@@ -35,7 +35,9 @@ work (see my first video).
 
 ## Videos
 
-https://youtu.be/VSay3rDXE0E
+LEGO vinyl record player v0.1
+
+[![LEGO vinyl record player v0.1](http://img.youtube.com/vi/VSay3rDXE0E/0.jpg)](https://youtu.be/VSay3rDXE0E "LEGO vinyl record player v0.1")
 
 
 # Limitations
