@@ -62,13 +62,13 @@ audio software).
 
 After the proof of concept, I've made a few modifications on the original model (but it is still based on PV Productions
 model):
-- better stability and vibration isolation
+- better stability and some vibration dampening
 - improved "platter" with a kind of rubber mat
 - longer tonearm with a J-shape and cable guidings
 - an adjustable "headshell" (2 DoF)
 - a very small change on the end of record detection
 - a RPM selector (33/45)
-- modified the tonearm stand so it locks
+- modified the tonearm stand so it can lock
 
 My code now:
 - progressively starts and stops the turntable rotation
@@ -92,7 +92,17 @@ plugin. This allows me to adjust the tone to my preferences.
 
 ## Future
 
+### short run
+
 I already bought a Ortofon MM cartrdige with a spherical needle. But I didn't tested it yet.
 
 MIDI integration is also planned for the next release so I can control the turntable with a portable USB DJ controller
 and/or a DAW.
+
+
+### long run
+
+Implement some sor of "robotic hand" that can pick and drop the tonearm with precison, then implement a tracklist so
+we can choose which track to play.
+
+No, I do not intend to implement a full jukebox. A human slave will always be needed to insert a record and replace it.
