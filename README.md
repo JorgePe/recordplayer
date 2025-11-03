@@ -6,7 +6,7 @@ Warning: work in progress - a second video with a demo of the current stat will 
 ## Goal
 
 Implement a LEGO robotic turntable that plays vinyl audio records AND take advantage from the EV3 power to do a few things:
-- automate the tonearm (lift up/down, autostop, position control)
+- automate the tonearm (lift up/down, auto-stop, auto-return, hopefully even position control)
 - 33/45 RPM selection and pitch adjustment
 - programmable DJ scratching
 - MIDI interface for passing data to and receive commands from a DAW
