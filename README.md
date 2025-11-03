@@ -83,8 +83,8 @@ My "DJ setup":
 - a laptop running [Linux Mint](https://linuxmint.com/) with the [Ubuntu Studio](https://ubuntustudio.org/) packages
 - monitor speakers
 
-The cartridge is connected to the 2 Hi-Z inputs of the Rubix. This results in a much better sound than with just my
-PC speakers.
+The cartridge is connected to the 2 Hi-Z inputs of the Rubix (500kΩ). This results in a much better sound than with just my
+PC speakers but i believe an even higher impedance would help.
 
 The laptop is running a 7-band stereo equalizer through [Carla](https://kx.studio/Applications:Carla) (a modular audio plugin host).
 This allows me to adjust the tone to my preferences. Later on I intend to route the audio to [Mixxx](https://mixxx.org/) for
