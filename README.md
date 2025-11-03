@@ -11,8 +11,8 @@ Implement a LEGO robotic turntable that plays vinyl audio records AND take advan
 - programmable DJ scratching
 - MIDI interface for passing data to and receive commands from a DAW
   
-Ideally it should have enough quality to be used with Mixxx in a public AFOL event as a [basic] DJ turntable with a Serato
-vinyl control record.
+Ideally it should have enough quality to be used with [Mixxx](https://mixxx.org/) in a public AFOL event as a [basic] DJ turntable
+with a [Serato vinyl control record](https://serato.com/vinyl-and-accessories/vinyl).
 
 ## Introduction
 
@@ -48,8 +48,8 @@ The ceramic cartridge used by PV Productions seems to be one of the "universal" 
 around, cheap, not so bad at all but still cheap and not exactly intended for DJ-ing (scratching will probably wear out the
 needle too fast... if it doesn't brake).
 
-I already bought a Ortofon MM cartridge with a spherical needle, sound should be better and DJ-ing would not hurt so much but
-will probably need to add a preamp.
+I already bought a [Ortofon MM cartridge](https://ortofon.com/products/om-pro-s) with a spherical needle, sound should be
+better and DJ-ing would not hurt so much but will probably need to add a preamp.
 
 But even if I get the best cartridge in the world... the LEGO motor makes too much noise. So don't expect to sit and relax
 hearing your favorite artist with it. But if you take it to a place with high ambient noise like an AFOL event or a DJ party,
@@ -70,7 +70,7 @@ model):
 - a RPM selector (33/45)
 - modified the tonearm stand so it can lock
 
-My code now:
+My code now [will explain it later, the documentation force is not strong on me]
 - progressively starts and stops the turntable rotation
 - detects the end of LP and Single records
 - allows selection of 33 or 45 RPM
@@ -79,14 +79,16 @@ My code now:
 
 My "DJ setup":
 - the LEGO turntable
-- a Roland Rubix 44 audio interface
-- a laptop running linux Mint with the Ubuntu Studio package
+- a [Roland Rubix44](https://www.roland.com/us/products/rubix44/) USB audio interface
+- a laptop running [Linux Mint](https://linuxmint.com/) with the [Ubuntu Studio](https://ubuntustudio.org/) packages
 - monitor speakers
 
-The cartridge is connected to the 2 Hi-Z inputs of the Rubix. This results in a much better sound than my PC speakers.
+The cartridge is connected to the 2 Hi-Z inputs of the Rubix. This results in a much better sound than with just my
+PC speakers.
 
-The laptop is running Linux Mint with the Ubuntu Studio packages installed. I'm using Carla with a 7-band stereo equalizer
-plugin. This allows me to adjust the tone to my preferences.
+The laptop is running a 7-band stereo equalizer through [Carla](https://kx.studio/Applications:Carla) (a modular audio plugin host).
+This allows me to adjust the tone to my preferences. Later on I intend to route the audio to [Mixxx](https://mixxx.org/) for
+basic DJ-ing.
 
 
 
@@ -94,7 +96,8 @@ plugin. This allows me to adjust the tone to my preferences.
 
 ### short run
 
-I already bought a Ortofon MM cartrdige with a spherical needle. But I didn't tested it yet.
+I already bought a [Ortofon OM PRO S](https://ortofon.com/products/om-pro-s) cartrdige with a spherical needle. But I didn't
+tested it yet.
 
 MIDI integration is also planned for the next release so I can control the turntable with a portable USB DJ controller
 and/or a DAW.
