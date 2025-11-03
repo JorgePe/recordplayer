@@ -1,7 +1,7 @@
 # recordplayer
 A LEGO vinyl record player based on MINDSTORMS EV3 and python
 
-Warning: work in progress
+Warning: work in progress - a second video with a demo of the current stat will follow soon
 
 ## Goal
 
@@ -46,7 +46,7 @@ Do not expect hi-fi quality (hey, it's LEGO!)
 
 The ceramic cartridge used by PV Productions seems to be one of the "universal" cartridges 
 around, cheap, not so bad at all but still cheap and not exactly intended for DJ-ing (scratching will probably wear out the
-needle).
+needle too fast... if it doesn't brake).
 
 I already bought a Ortofon MM cartridge with a spherical needle, sound should be better and DJ-ing would not hurt so much but
 will probably need to add a preamp.
@@ -85,11 +85,14 @@ My "DJ setup":
 
 The cartridge is connected to the 2 Hi-Z inputs of the Rubix. This results in a much better sound than my PC speakers.
 
-The laptop is running Linux Mint with the Ubuntu Studio packages installed. I'm using Carla with a 7-band stereo equalizer plugin.
-This allows me to adjust the tone to my preferences.
+The laptop is running Linux Mint with the Ubuntu Studio packages installed. I'm using Carla with a 7-band stereo equalizer
+plugin. This allows me to adjust the tone to my preferences.
 
 
 
 ## Future
 
 I already bought a Ortofon MM cartrdige with a spherical needle. But I didn't tested it yet.
+
+MIDI integration is also planned for the next release so I can control the turntable with a portable USB DJ controller
+and/or a DAW.
