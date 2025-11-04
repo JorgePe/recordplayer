@@ -173,12 +173,14 @@ while True:
     if not spinning:
         cur_status_speed = tsSpeed.is_pressed
         if cur_status_speed != status_speed:
-            if cur_status_speed:
-                SPEED = SPEED_33
+            if speed33:
+                SPEED = SPEED_33 + curPitch*6
                 print("33 RPM")
             else:
-                SPEED = SPEED_45
+                SPEED = SPEED_45 + curPitch*8    # 45/33 = 8.18
                 print("45 RPM")
+            print(SPEED)
+
             status_speed = cur_status_speed
 
     if btn.any():
@@ -247,4 +249,3 @@ sleep(0.5)
 print("End")
 sound.beep()
 mArm.stop()
-
