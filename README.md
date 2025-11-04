@@ -18,7 +18,7 @@ with a [Serato vinyl control record](https://serato.com/vinyl-and-accessories/vi
 
 This project started after finding a curious item at PV Productions site: a [Turntable Needle for LEGO](https://pv-productions.com/product/turntable-needle/).
 
-This is essentially a ceramic cartridge directly wired to a 3.5mm stereo female plug inside a 3D-printed mold. Ceramic cartriges
+This is essentially a ceramic cartridge directly wired to a 3.5mm stereo female plug inside a 3D-printed case. Ceramic cartriges
 are much cheaper than better performance types of cartridges ("MM", "MC") but also have a much higher voltage output that allows
 them to be connected directly to an amplifier without a phono preamp.
 
@@ -53,15 +53,15 @@ better and DJ-ing would not hurt so much but will probably need to add a preamp.
 
 But even if I get the best cartridge in the world... the LEGO motor makes too much noise. So don't expect to sit and relax
 hearing your favorite artist with it. But if you take it to a place with high ambient noise like an AFOL event or a DJ party,
-with a power amplifier and big speakers... no one will notice.
+with a powerful amplifier and big speakers... no one will notice the motor.
 
-Also notice that my goals also require some extra hardware and software (like a laptop with a decent audio interface and some
-audio software).
+Also note that my goals also require some extra hardware and software (like a laptop with a decent audio interface and some
+audio software or a standalone home studio)
 
 ## Progress
 
-After the proof of concept, I've made a few modifications on the original model (but it is still based on PV Productions
-model):
+After the initial proof of concept, I've made a few modifications on the original model (but it is still based on PV
+Productions model):
 - better stability and some vibration dampening
 - improved "platter" with a kind of rubber mat
 - longer tonearm with a J-shape and cable guidings
@@ -77,14 +77,15 @@ My code now [will explain it later, the documentation force is not strong on me]
 - allows adjustment of the pitch (+/-7%... or infinite)
 - does a silly DJ scratching trick
 
-My "DJ setup":
+My current "DJ setup":
 - the LEGO turntable
 - a [Roland Rubix44](https://www.roland.com/us/products/rubix44/) USB audio interface
 - a laptop running [Linux Mint](https://linuxmint.com/) with the [Ubuntu Studio](https://ubuntustudio.org/) packages
 - monitor speakers
 
 The cartridge is connected to the 2 Hi-Z inputs of the Rubix (500kΩ). This results in a much better sound than with just my
-PC speakers but i believe an even higher impedance would help.
+PC speakers but I believe an even higher impedance would help (for the proof of concept I used a Zoom U-24, just one channel
+instead of stereo but the Hi-Z mode of the Zoom has 1.1 MΩ).
 
 The laptop is running a 7-band stereo equalizer through [Carla](https://kx.studio/Applications:Carla) (a modular audio plugin host).
 This allows me to adjust the tone to my preferences. Later on I intend to route the audio to [Mixxx](https://mixxx.org/) for
