@@ -91,7 +91,10 @@ The laptop is running a 7-band stereo equalizer through [Carla](https://kx.studi
 This allows me to adjust the tone to my preferences. Later on I intend to route the audio to [Mixxx](https://mixxx.org/) for
 basic DJ-ing.
 
-
+-- 06/Nov/2025 --
+Just tried a Serato Control Vinyl with Mixxx. Amazingly... it works! I can control the playing of a digital track with a LEGO
+vinyl turnatable!!
+(yes, I do need to publish a video)
 
 ## Future
 
