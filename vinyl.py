@@ -55,35 +55,48 @@ print(SPEED_33, SPEED_45)
 def scratch():
     # temporarily adjust ramp up/down to better simulate a DJ hand
     # no luck yet
-    mTurntable.ramp_up_sp = 0.7
-    mTurntable.ramp_down_sp = 0.7
+#    mTurntable.ramp_up_sp = 0.7
+#    mTurntable.ramp_down_sp = 0.7
+    mTurntable.ramp_up_sp = 0
+    mTurntable.ramp_down_sp = 0
 
     if speed33:
-        sp_percent = 12.3     # 13
-        pause = 0.38        #  0.35
+        sp_percent = 14.8      # 12.3
+        pause = 1.27           # 0.38
     else:
-        sp_percent = int (12.3 * 45/33)
-        pause = 0.38 * 45/33   # 0.35
+        sp_percent = int (14.8 * 45/33)
+        pause = 1.27 * 45/33
 
-    # back and forth and back
-    mTurntable.on(-sp_percent, brake=False)
-    sleep(pause)
-    mTurntable.on(sp_percent+1, brake=False)
-    sleep(pause)
-    mTurntable.on(-sp_percent, brake=False)
-    sleep(pause)
+    # baby scratch 2x
+    # forth and back and forth
 
-    # release
-    # ramp up/down here works much better
-    mTurntable.ramp_up_sp = 850 # 0 900 550
-    mTurntable.ramp_down_sp = 850 # 0 900 550
+#    mTurntable.on(sp_percent, brake=False)
     mTurntable.on(SpeedDPM(SPEED), brake=False)
+    sleep(pause)
+#    mTurntable.on(-sp_percent * 1.05, brake=False)
+    mTurntable.on(SpeedDPM(-SPEED*1.025), brake=False)
+    sleep(pause*1.0)
+#    mTurntable.on(sp_percent, brake=False)
+    mTurntable.on(SpeedDPM(SPEED), brake=False)
+    sleep(pause*1.25)
+#   mTurntable.on(-sp_percent * 1.05, brake=False)
+#    mTurntable.on(SpeedDPM(-SPEED*1.03), brake=False)
+#    sleep(pause*0.88)
     
-    # wait enough time for the motor to reach target speed then reset ramp up/down 
-    sleep(1)  # perhaps too much
-    mTurntable.ramp_up_sp = RampUp
-    mTurntable.ramp_down_sp = RampDn
-
+    # release
+    
+    if spinning:
+        # ramp up/down here works much better
+        mTurntable.ramp_up_sp = 850 # 0 900 550
+        mTurntable.ramp_down_sp = 850 # 0 900 550
+        mTurntable.on(SpeedDPM(SPEED), brake=False)
+    
+        # wait enough time for the motor to reach target speed then reset ramp up/down 
+        sleep(1)  # perhaps too much
+        mTurntable.ramp_up_sp = RampUp
+        mTurntable.ramp_down_sp = RampDn
+    else:
+        mTurntable.stop()
 
 def arm_down():
     print("DOWN")
