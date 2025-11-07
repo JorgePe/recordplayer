@@ -57,6 +57,7 @@ def scratch():
     # no luck yet
 #    mTurntable.ramp_up_sp = 0.7
 #    mTurntable.ramp_down_sp = 0.7
+
     mTurntable.ramp_up_sp = 0
     mTurntable.ramp_down_sp = 0
 
@@ -70,18 +71,18 @@ def scratch():
     # baby scratch 2x
     # forth and back and forth
 
-#    mTurntable.on(sp_percent, brake=False)
-    mTurntable.on(SpeedDPM(SPEED), brake=False)
-    sleep(pause)
-#    mTurntable.on(-sp_percent * 1.05, brake=False)
+    # already moving forward?
+    if not spinning:
+        # forth
+        mTurntable.on(SpeedDPM(SPEED), brake=False)
+        sleep(pause)
+
+    # and back
     mTurntable.on(SpeedDPM(-SPEED*1.025), brake=False)
     sleep(pause*1.0)
-#    mTurntable.on(sp_percent, brake=False)
+    # and forth
     mTurntable.on(SpeedDPM(SPEED), brake=False)
     sleep(pause*1.25)
-#   mTurntable.on(-sp_percent * 1.05, brake=False)
-#    mTurntable.on(SpeedDPM(-SPEED*1.03), brake=False)
-#    sleep(pause*0.88)
     
     # release
     
@@ -92,7 +93,7 @@ def scratch():
         mTurntable.on(SpeedDPM(SPEED), brake=False)
     
         # wait enough time for the motor to reach target speed then reset ramp up/down 
-        sleep(1)  # perhaps too much
+        sleep(0.2)  # 1.0 was too much
         mTurntable.ramp_up_sp = RampUp
         mTurntable.ramp_down_sp = RampDn
     else:
@@ -204,6 +205,7 @@ while True:
                 # arm up
                 arm_up()
                 arm_is_down = False
+            sleep(0.20)   # debounce time
         elif btn.down:
             print("BTN DOWN")
             if not arm_is_down:
@@ -216,20 +218,23 @@ while True:
                 arm_is_down = True
                 # arm down
                 arm_down()
+            sleep(0.20)   # debounce time
+
         elif btn.left:
             print("BTN LEFT")
             if arm_is_down:
                 print("scratch")
                 scratch()
+#             sleep(0.20)   # debounce time - not good for scratching
+
         elif btn.enter:
             print("BTN ENTER" )
             if spinning:
                 stop_spin()
             else:
                 start_spin()
-
-        sleep(0.25)   # debounce time
-
+            sleep(0.20)   # debounce time
+            
     # read Pitch Dial
     curPitch = mPitch.position
     if curPitch != refPitch:
