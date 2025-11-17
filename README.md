@@ -43,8 +43,8 @@ Very soon [this November] I hope to release a video of v0.2
 
 ## Limitations
 
-Do not expect hi-fi quality. This is 99% LEGO so... le-fi (but with good headphones that isolate external noise, I've
-found myselft really enjoying my somewhat damaged Kraftwerk record).
+Do not expect hi-fi quality. This is 99% LEGO so... le-fi (but with good headphones to isolate external noise, I've
+found myself really enjoying my somewhat damaged Kraftwerk record).
 
 The ceramic cartridge used by PV Productions seems to be a chinese clone of the [Pfanstiehl P-188 or Chuo Denshi CZ-800
 model](https://www.thevoiceofmusic.com/catalog/part_detail.asp?PNumberBase=P188). Cheap and not exactly intended for
@@ -67,15 +67,15 @@ audio software or a standalone home studio).
 After the initial proof of concept, I've made a few modifications on the original model (but it is still based on PV
 Productions model):
 - better stability and some vibration dampening
-- improved "platter" with a kind of rubber mat
+- improved platter with a kind of rubber mat
 - longer tonearm with a J-shape and cable guidings
 - an adjustable "headshell" (2 DoF)
-- a very small change on the end of record detection
+- a very small change in the end of record detection
 - a RPM selector (33/45)
 - modified the tonearm stand so it can lock
-- a primitive mechanism to manually adjust the vertical tracking force
+- a gymbal pivot with a primitive mechanism to manually adjust the VTA (vertical tracking angle)
 - a primitive anti-skating solution
-- a "plinth"
+- a plinth
 
 My code now [will explain it later, the documentation force is not strong on me]:
 - progressively starts and stops the turntable rotation
@@ -91,9 +91,11 @@ My current "DJ setup":
 - monitor speakers
 - headphones
 
-The cartridge is connected to the 2 Hi-Z inputs of the Rubix (500kΩ). This results in a much better sound than with just my
+The cartridge is connected to the 2 Hi-Z inputs of the Rubix (500 kΩ). This results in a much better sound than with just my
 PC speakers but I believe an even higher impedance would help (for the proof of concept I used a Zoom U-24, just one channel
 instead of stereo but the Hi-Z mode of the Zoom has 1.1 MΩ).
+
+The Rubix also has a Compressor/Limiting feature that greatly improves the sound perception when selected.
 
 The laptop is running a 7-band stereo equalizer through [Carla](https://kx.studio/Applications:Carla) (a modular audio plugin
 host). This allows me to adjust the tone to my preferences.
@@ -104,7 +106,7 @@ motion):
 
 ![Mixxx: Vinyl Control scope signal](https://manual.mixxx.org/2.7/pt/_images/vinyl_control_scope_signal_ok.png)
 
-Adding a mp3 music to the the playing queue I could control the playing of a digital track with a LEGO vinyl turnatable!!
+Adding a MP3-based music to the the playing queue I could control the playing of a digital track with a LEGO vinyl turnatable!!
 (yes, I do need to publish a video)
 
 ## Future
